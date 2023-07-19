@@ -1,0 +1,545 @@
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+  @import "reset";
+
+    $main-dark-color: #134A45;
+    $main-light-color: #CFD4D8;
+    $secondary-light-color: #96C9E9;
+
+  @mixin font($color, $f-size, $l-height, $l-spacing, $margin) {
+    color: $color;
+    font-size: $f-size;
+    line-height: $l-height;
+    letter-spacing: $l-spacing;
+    margin: $margin;
+    font-family: Roboto;
+  }
+
+  a {
+    text-decoration: none;
+    color: $main-light-color;
+  }
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+}
+
+nav {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0 60px;
+    padding: 0 30px 0 142px;
+    box-shadow: 0px 0px 10px 0px #00000017;
+    box-sizing: border-box;
+}
+
+.nav__menu {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.nav__menu a{
+    text-decoration: none;
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 30px;
+    color: #134A45;
+}
+
+nav .nav__menu:last-child {
+    li:last-child {
+        border: 1px solid gray;
+        padding: 11px 16px;
+        display: flex;
+        gap: 10px;
+    }
+}
+
+// hero section 
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 30px;
+}
+
+.hero__title {
+    font-family: Roboto;
+    font-size: 63px;
+    font-weight: 400;
+    line-height: 73px;
+    letter-spacing: 2px;
+    width: 430px;
+}
+
+.hero__content p {
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0.20000000298023224px;
+    margin: 40px 0 57px;
+}
+
+.hero__content strong {
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 30px;
+    background-color: #134A45;
+    padding: 6px 68px 6px 25px;
+    color: #fff;
+}
+
+.hero__content {
+    position: relative;
+}
+
+.hero__content img {
+    position: absolute;
+    bottom: -130px;
+    left: -50px;
+    z-index: 1;
+}
+
+.hero__images {
+    position: relative;
+    width: 50%;
+    height: 484px;
+}
+
+// .hero__img-1 {
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+// }
+
+.hero__img-2 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+}
+
+.hero__img-3 {
+    position: absolute;
+    bottom: 0;
+    right: 46px;
+}
+
+.hero__img-4 {
+    position: absolute;
+    top: 19px;
+    right: -53px;
+}
+
+.hero__img-5 {
+    position: absolute;
+    bottom: 0;
+    left: 36px;
+}
+
+.second__section {
+    background-color: $main-light-color;
+    padding: 69px 0 34px;
+    position: relative;
+    z-index: 2;
+    .info {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 40px;
+        border-top: 1px solid #14464157;
+        p {
+            @include font($main-dark-color, 20px, 30px, 0, 0);
+            
+        }
+        .second__img {
+            display: flex;
+            gap: 12px;
+            img {
+               padding: 18px 18px;
+               background-color: $secondary-light-color;
+               border-radius: 50%;
+            }
+        }
+    }
+    .brand__logo {
+        display: flex;
+        justify-content: space-around;
+        margin: 74px 0 20px;
+    }
+    p {
+        @include font($main-dark-color, 17px, 28px, 0.2px, 0)
+    }
+}
+
+.health__section {
+    background-color: $main-dark-color;
+    padding: 59px 0 100px;
+    min-height: calc(920px - 159px);
+    .health__sistem {
+        position: relative;
+        .extra__img {
+            position: absolute;
+            top: -73px;
+            left: 24px;
+            z-index: 2;
+        }
+        .health__wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            z-index: 2;
+            background-color: #B961CD;
+            padding: 28px 98px 24px 224px;
+
+            .health__menu {
+                max-width: 280px;
+                a {
+                    @include font($main-light-color, 13px, 21px, 0.2px, 0)
+                }
+            }
+        }
+        .health__btn {
+            border: none;
+            background-color: #B961CD;
+            @include font($main-light-color, 15px, 30px, _, 20px )
+        }
+
+        .health__hero {
+            display: flex;
+            align-items: center;
+            gap: 144px;
+            position: absolute;
+            top: 100px;
+            .health__content {
+                strong {
+                    @include font($main-light-color, 13px, 20px, 4px, 0)
+                }
+                h2 {
+                    max-width: 392px;
+                    @include font($main-light-color, 46px, 57px, 0.6px, 30px 0 35px 0)
+                }
+                p {
+                    max-width: 456px;
+                    opacity: 0.7;
+                    @include font($main-light-color, 17px, 28px, 0.2px,0)
+                }
+            }
+        }
+    }
+}
+
+
+.solution__section {
+    .solution {
+        margin: 99px auto 46px;
+        text-align: center;
+        strong {
+            @include font($main-dark-color, 13px, 20px, 4px,0)
+        }
+        h2 {
+            width: 702px;
+            @include font($main-dark-color,49px, 57px, 0.4px, 30px auto 0)
+        }
+    }
+    .solution__wrapper {
+        display: flex;
+        .solution__content {
+            background-color: #96C9E9;
+            width: 570px;
+            h2 {
+                text-align: center;
+                @include font(#CFD4D8, 40px, 40px, 0.2, 432px auto 32px)
+            }
+            p {
+                width: 367px;
+                text-align: center;
+                @include font(#CFD4D8, 17px, 28px, 0.2px, 0 auto 94px)
+            }
+            strong {
+                display: block;
+                max-width: 379px;
+                text-align: center;
+                @include font(#CFD4D8, 17px, 28px, 0.2px, auto )
+            }
+        }
+        
+    }
+}
+
+
+.service__section {
+    background-color: $main-light-color;
+    margin-top: 80px;
+    padding-bottom: 118px;
+    .content__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+        padding-top: 94px;
+        h2 {
+            max-width: 580px;
+            @include font($main-dark-color, 50px, 57px, 0.6px, 0 0 33px 0)
+        }
+        p {
+            max-width: 467px;
+            @include font($main-dark-color, 20px, 28px, 0.2px, 0 0 58px 0)
+        }
+    }
+
+    .cards__wrapper {
+        max-width: 1100px;
+        display: flex;
+        gap: 0 40px;
+        position: relative;
+        .cards {
+            display: flex;
+            flex-direction: column;
+            align-items: end;
+            gap: 32px 0;
+            .card-1 {
+                background-color: $secondary-light-color;
+                padding: 29px 50px;
+                position: relative;
+                z-index: 1;
+                border-bottom: 8px solid $main-dark-color;
+                h2 {
+                    @include font($main-dark-color, 90px, 80px, 0.2px, 0 0 43px 0)
+                }
+                p {
+                    max-width: 296px;
+                    @include font($main-dark-color, 20px, 28px, 0.2px, 0 134px 180px 0)
+                }
+
+                img {
+                    position: absolute;
+                    right: 50px;
+                    top: 158px;
+                    z-index: -1;
+                }
+            }
+
+            .card-2 {
+                padding: 29px 50px;
+                background-color: #D0C2BB;
+                border-bottom: 8px solid #B8A086;
+                max-width: 371px;
+                box-sizing: border-box;
+                h2 {
+                    @include font($main-dark-color, 86px, 80px, 0.2px, 0 0 43px 0)
+                }
+                p {
+                    width: 250px;
+                    @include font($main-dark-color, 20px, 28px, 0.2px, 0)
+                }
+            }
+
+            .card-3 {
+                padding: 29px 50px;
+                background-color: #B961CD;
+                border-bottom: 8px solid #7F3490;
+                h2 {
+                    @include font($main-light-color, 86px, 80px, 0.2px, 0 0 43px 0)
+                }
+                p {
+                    width: 217px;
+                    @include font($main-light-color, 20px, 28px, 0.2px, 0)
+                }
+            }
+
+            .card-4 {
+                padding: 29px 50px;
+                background-color: $main-dark-color;
+                border-bottom: 8px solid #96C9E9;
+                width: 530px;
+                box-sizing: border-box;
+                position: relative;
+                z-index: 1;
+                h2 {
+                    @include font($main-light-color, 86px, 80px, 0.2px, 0 0 43px 0)
+                }
+                p {
+                    width: 269px;
+                    @include font($main-light-color, 20px, 28px, 0.2px, 0 0 180px 0)
+                }
+                img {
+                    position: absolute;
+                    left: 280px;
+                    top: 130px;
+                    z-index: -1;
+
+                }
+            }
+            .card-5 {
+                width: 260px;
+                min-height: 848px;
+                background-color: #508883;
+            }
+        }
+        .secondary-card {
+            align-items: start;
+            margin-top: -75px;
+            
+        }
+        .last-service-card {
+            position: absolute;
+            z-index: 2;
+            right: -50px;
+        }
+    }
+}
+
+.how-we-do-it {
+    display: flex;
+    gap: 122px;
+    align-items: center;
+    margin-top: 100px;
+    .do-it__content {
+        position: relative;
+        strong {
+            @include font($main-dark-color, 13px, 20px, 4px, 0)
+        }
+        h2 {
+            @include font($main-dark-color, 47px, 57px, 0.6px, 30px 0 35px)
+        }
+        p {
+            @include font($main-dark-color, 17px, 28px, 0.2px, 0 0 19px )
+        }
+        img {
+            position: absolute;
+            top: 533px;
+            left: 88px;
+        }
+    }
+    .do-it__img {
+        padding-bottom: 10px;
+        border-bottom: 10px solid #B961CD;
+        position: relative;
+        img:last-child {
+            position: absolute;
+            top: 0;
+            right: -30px;
+        }
+    }
+}
+
+.team__section {
+    background-color: $main-light-color;
+    padding: 94px 0 100px;
+    margin-top: 90px;
+    .team__info {
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+        h2 {
+            width: 617px;
+            @include font($main-dark-color, 50px, 57px, 0.6, 0 0 66px 0)
+        }
+        .team__images {
+            display: flex;
+            gap: 12px;
+            img {
+               padding: 18px 18px;
+               background-color: $secondary-light-color;
+               border-radius: 50%;
+            }
+        }
+    }
+    .team__cards {
+        display: flex;
+        gap: 40px;
+        overflow: auto ;
+        .team__card-1 {
+            padding: 40px 62px 40px 40px;
+            background-color: $main-dark-color;
+            h3 {
+                width: 184px;
+                @include font($main-light-color, 26px, 30px, _, 0)
+            }
+            p {
+                width: 238px;
+                @include font($main-light-color, 17px, 30px, 0.2px, 19px 0 191px 0)
+            }
+        }
+        .team__card-2 {
+            padding: 40px 62px 40px 40px;
+            background-color: #E5E8EB;
+            h3 {
+                width: 184px;
+                @include font($main-dark-color, 26px, 30px, _, 0)
+            }
+            p {
+                width: 238px;
+                @include font($main-dark-color, 17px, 30px, 0.2px, 19px 0 191px 0)
+            }
+            img {
+                margin-left: 240px;
+                margin-top: 80px;
+            }
+        }
+        .team__card-3 {
+            padding: 40px 62px 40px 40px;
+            background-color: $secondary-light-color;
+            h3 {
+                width: 184px;
+                @include font($main-dark-color, 26px, 30px, _, 0)
+            }
+            p {
+                width: 238px;
+                @include font($main-dark-color, 17px, 30px, 0.2px, 19px 0 191px 0)
+            }
+            img {
+                margin-left: 240px;
+                margin-top: 80px;
+            }
+        }
+        .team__card-4 {
+            padding: 40px 62px 40px 40px;
+            background-color: #B961CD;
+            h3 {
+                width: 184px;
+                @include font($main-light-color, 26px, 30px, _, 0)
+            }
+            p {
+                width: 238px;
+                @include font($main-light-color, 17px, 30px, 0.2px, 19px 0 191px 0)
+            }
+            img {
+                margin-left: 240px;
+                margin-top: 50px;
+            }
+        }
+        
+        
+    }
+}
+
+.help-us {
+    background-color: $secondary-light-color;
+    .help-us__content {
+        text-align: center;
+        h2 {
+            max-width: 726px;
+            @include font($main-dark-color, 50px, 57px, 0.6px, 100px)
+        }
+        p {
+            @include font($main-dark-color, 20px, 28px, 0.2, 30px auto 45px)
+        }
+        a {
+            border: none;
+            padding: 5px 95px 5px 45px;
+            background-color: $main-dark-color;
+            @include font($main-light-color, 25px, 57px _, 0)
+        }
+    }
+}
+  
